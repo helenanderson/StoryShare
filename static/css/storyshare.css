@@ -1,25 +1,15 @@
-/* applies to anything of class "example-class-selector" */
-.example-class-selector {
-	margin-top: 2em;
-}
-
-/* applies to any <p> descendants of an element of class "example-class-selector" */
-.example-class-selector p {
-	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
-}
-
-
 .jumbotron {
 	position: relative;
 	background: none;
      text-align: center;
-     color: white;
+     color: #323232;
+     padding: 55px;
+     margin-bottom: 0px;
 }
 
 .jumbotron:after {
      content:"";
-     background-color: black;
+     background-image: url(images/lined_paper_by_LL_stock.jpg);
      opacity: 1;
      top: 0;
      left: 0;
@@ -29,8 +19,30 @@
      z-index: -1;	
 }
 
-
-
-.nav {
+.btn-group {
+     padding-top: 40px;
      text-align: center;
+}
+
+button {
+     background: transparent;
+     border-width: 20px;
+     border: 20px;
+     border-color: #323232;
+}
+
+#writeread {
+     border: 40px;
+     border-color: black;
+     font-family: 'Raleway', sans-serif;
+     font-size: 50px;
+}
+
+h1 {
+     font-family: 'Mrs Sheppards', cursive;
+     font-size: 80px;
+}
+
+body {
+     background-color: #323232;
 }
