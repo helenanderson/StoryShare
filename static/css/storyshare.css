@@ -9,6 +9,11 @@
      content:"Story Share";
      font-size: 60px;
      font-family: cursive;
+     color: #333333;
+}
+
+.story{
+     width: 480px;
 }
 /*s
 .jumbotron {
