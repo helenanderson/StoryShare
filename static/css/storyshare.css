@@ -3,13 +3,14 @@
      width: 480px;
      height: 120px;
      background-image: url("file:../images/jumbotron.image.jpg");
+     padding-top: 20px;
 }
 .banner:after{
      content:"Story Share";
      font-size: 60px;
      font-family: cursive;
 }
-/*
+/*s
 .jumbotron {
 	position: relative;
 	background: none;
