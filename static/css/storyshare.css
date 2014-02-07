@@ -5,15 +5,40 @@
      background-image: url("file:../images/jumbotron.image.jpg");
      padding-top: 20px;
 }
+
 .banner:after{
      content:"Story Share";
-     font-size: 60px;
-     font-family: cursive;
-     color: #333333;
+     font-family: 'Mrs Sheppards', cursive;
+     font-size: 80px;
+     color: black;
 }
 
 .story{
      width: 480px;
+     
+}
+
+.titleprog {
+     display: inline-block;
+}
+
+.menu {
+     width: 480px;
+}
+
+.thumb {
+     width: 100px;
+     height: 100px;
+     border: 1px solid #021a40;
+}
+
+.percentcomplete {
+     width: 350px;
+}
+
+h2 {
+     font-size: 30px;
+
 }
 /*s
 .jumbotron {
