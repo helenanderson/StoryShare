@@ -1,11 +1,11 @@
 {
-  "name": "IntroHCI",
+  "name": "Story Share",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "author": "Sam, Helen, Maggie",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/sgussman/StoryShare"
   },
   "license": "MIT",
 
