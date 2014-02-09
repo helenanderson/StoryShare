@@ -6,7 +6,7 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="css/introHCI.css" rel="stylesheet">
-		<link href="css/storyshareformat.css" rel="stylesheet"> 
+		<link href="css/storyshare.css" rel="stylesheet"> 
 		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
 	</head>
 	</head>
@@ -18,7 +18,7 @@
   				<div class="container-fluid">
   					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       					<ul class="nav navbar-nav">
-        					<li><a href="placeholders/addStory.html"><span class="glyphicon glyphicon-plus"></span></a></li>
+        					<li><a href="addStory.html"><span class="glyphicon glyphicon-plus"></span></a></li>
         					<form class="navbar-form navbar-left" role="search">
         						<div class="form-group">
           							<input type="text" class="form-control" placeholder="Search">
@@ -35,17 +35,15 @@
 			</nav>
 
 
+		{{#each stories}}
 			<div class="story" id="sample">
-				<img class="thumb img-rounded" src="../images/W.jpg">
+				<a href="/story/{{title}}"><h><img class="thumb img-rounded" src="images/W.jpg">
 				<div class="titleprog">
-					<span><h2>Words of the Wise Weasel</h2></span>
-					<div class="progress percentcomplete">
-		  				<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-		    				<!-- <span class="sr-only">60% Complete (warning)</span> -->
-		  				</div><p style="text-align:right">2 hours ago</p>
-					</div>	
+					<span style="overflow:hidden">{{title}}</span></h></a>
 				</div>
-			</div>		
+			</div>
+		{{/each}}
+	
 		</div>
 	</body>
 </html>
