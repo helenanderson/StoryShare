@@ -5,10 +5,10 @@
 		<title>Story Page</title>	
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="../css/bootstrap.css" rel="stylesheet">
-		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-		<link href="../css/introHCI.css" rel="stylesheet">
-		<link href="../css/storyshare.css" rel="stylesheet"> 
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/introHCI.css" rel="stylesheet">
+		<link href="/css/storyshareformat.css" rel="stylesheet"> 
 	</head>
 
 	<body>
@@ -39,8 +39,9 @@
 			<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 			<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
 			<div class="story" id="story 1">
-				<h2> An Ode to Omosola Odetunde </h2>
-					<p><big>Omosola is our Studio-leader TA. She's also universally considered the best, brightest, most beautiful studio leader there is. She's objectively better than the others- even middle-aged Graham Roth. Legends tell us that she single handedly slew a horde of dragons that were threatening to take over London. She then discovered the theory of relativety and built the pyramids. Since coming to Stanford she has graciously decided to bless her sectionees with her devoted attention and unparalleled teaching ability. She's such a good teacher that all her sectionees end up getting an A. Just to reiterate- Omosola is the best.</big></p>
+				<h2> {{title}} </h2>
+					<p>{{text}}</p>
+					<h4>Votes: {{votes}}</h4>
 			</div>
 <!-- 
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
@@ -50,8 +51,10 @@
 	<!-- Add the "back button" -->
 
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/storyshare.js"></script>
 
 	</body>
 </html>
