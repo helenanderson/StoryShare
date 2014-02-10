@@ -6,7 +6,7 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="css/introHCI.css" rel="stylesheet">
-		<link href="css/storyshare.css" rel="stylesheet"> 
+		<link href="css/storyshareformat.css" rel="stylesheet"> 
 		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
 	</head>
 	</head>
@@ -35,15 +35,20 @@
 			</nav>
 
 
+
 		{{#each stories}}
 			<div class="story" id="sample">
 				<a href="/story/{{title}}"><h><img class="thumb img-rounded" src="images/W.jpg">
 				<div class="titleprog">
 					<span style="overflow:hidden">{{title}}</span></h></a>
 				</div>
+				<h>{{text}}</h>
 			</div>
 		{{/each}}
 	
 		</div>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/storyshare.js"></script>
 	</body>
 </html>
