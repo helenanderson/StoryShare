@@ -14,7 +14,7 @@
 	<body>
 		<div class="container">
 
-			<a href="menu.html"><div class="banner" id = "StoryBanner"></div></a>
+			<a href="/placeholders/menu.html"><div class="banner" id = "StoryBanner"></div></a>
 
 			<nav class="navbar navbar-default" role="navigation">
 		  				<div class="container-fluid">  
@@ -35,17 +35,19 @@
 		    	  	</div><!-- /.navbar-collapse -->
 		  		</div><!-- /.container-fluid -->
 			</nav>
-			<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-			<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-			<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-			<div class="story" id="story 1">
+			<div class="story" id="story1">
+
+				
 				<h2> {{title}} </h2>
-					<p>{{text}}</p>
-					<h4>Votes: {{votes}}</h4>
+					<p class = "text">{{text}}</p>
+					<h4 class = "votes">Votes: {{votes}}</h4>
 			</div>
 <!-- 
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
-			<a href="keyboard.html"><button id="addbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Add to Story</button></a>
+			
+			{{#if _finished}}
+				<a href="keyboard.html"><button id="addbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Add to Story</button></a>
+			{{/if}}
 		</div>
 
 	<!-- Add the "back button" -->
@@ -54,7 +56,7 @@
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/jquery-1.11.0.js"></script>
 		<script src="/js/bootstrap.js"></script>
-		<script src="/js/storyshare.js"></script>
+		<script src="/js/storypage.js"></script>
 
 	</body>
 </html>
