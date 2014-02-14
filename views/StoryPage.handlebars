@@ -35,12 +35,9 @@
 		    	  	</div><!-- /.navbar-collapse -->
 		  		</div><!-- /.container-fluid -->
 			</nav>
-			<div class="story" id="story1">
-
-				
+			<div id="story">	
 				<h2> {{title}} </h2>
-					<p class = "text">{{text}}</p>
-					<h4 class = "votes">Votes: {{votes}}</h4>
+				<p id ="text">{{text}}</p>
 			</div>
 <!-- 
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
@@ -48,6 +45,8 @@
 			{{#if _finished}}
 				<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Add to Story</button>
 			{{/if}}
+
+			 <h4> <button id="upVote" type="button" class="btn btn-default">Up Vote</button> <span id="votes">{{votes}}</span><button id="downVote" type="button" class="btn btn-default">Down Vote</button></h4>
 		</div>
 
 	<!-- Add the "back button" -->

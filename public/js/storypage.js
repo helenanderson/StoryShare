@@ -7,7 +7,10 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-	$('#addBtn').click(addToStory);
+	$('#addBtn').click(addToStoryInit);
+	$('#upVote').click(UpVote);
+	$('#downVote').click(DownVote);
+
 // 	var story = $("#story1").text();
 // 	//var numSentences = $(this.".sentences");
 // 	//if (numSentences == 10) console.log("The Story is complete.");
@@ -16,8 +19,59 @@ function initializePage() {
 // }
 }
 
-function addToStory(e) {
+function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
-	$(this).replaceWith("<div class='row'><div class='col-lg-6'><div class='input-group'><span class='input-group-btn'><button class='btn btn-default' type='button'>Go!</button></span><input type='text' class='form-control'></div></div><div class='col-lg-6'><div class='input-group'><input type='text' class='form-control'><span class='input-group-btn'><button class='btn btn-default' type='button'>Add!</button></span></div></div></div>");
+	$(this).replaceWith("<form id ='textToAddForm'><input type='text'id='textToAdd' placeholder='Type Text Here!'><input type= 'submit' value='Add!'></form>");
+	$('#textToAddForm').submit(addToStory);
+}
+
+function addToStory(e) {
+	e.preventDefault();
+	console.log("Add To Story Button clicked!");
+	var newText = $("#textToAdd").val()
+	// console.log(newText);
+	if (newText == "") 
+		{
+			$(this).append("<p>No text entered. Please try again.");
+			return;
+		}
+
+	var q_index = newText.indexOf("\?");
+	var p_index = newText.indexOf(".");
+	var e_index = newText.indexOf("!");
+	var index = minimum(e_index, minimum(p_index, q_index));
+
+	if (index == -1) {
+		$("#text").text($("#text").text() + " " + newText + ".");
+		$("#textToAddForm").hide();
+		return;
+	}
+	index++;
+	newText = newText.substring(0, index);
+	$("#text").text($("#text").text() + " " + newText);
+	$("#textToAddForm").hide();
+}
+
+function UpVote(e) {
+	// console.log("upvote");
+	var votes = $("#votes").text();
+	votes++;
+	$("#votes").text(votes);
+	$("#downVote").prop('disabled', false);
+	$("#upVote").prop('disabled', true);
+}
+
+function DownVote(e) {
+	// console.log("downvote");
+	var votes = $("#votes").text();
+	votes--;
+	$("#votes").text(votes);
+	$("#downVote").prop('disabled', true);
+	$("#upVote").prop('disabled', false);
+}
+
+function minimum(num1, num2){
+	if (num2 == -1) return num1;
+	return (num1 != -1 && num1 < num2) ? num1:num2;
 
 }
