@@ -7,14 +7,15 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
 
 var main = require('./routes/main');
 var story = require('./routes/story');
-//*** var project = require('./routes/project');
 
-// Example route
-// var user = require('./routes/user');
-
+var local_database_name = 'storyshare';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name
+var database_uri = process.env.MONGOLAB_URI || local_database_uri
+mongoose.connect(database_uri);
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -39,7 +41,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', main.view);
-app.get('/story/:title', story.view)
+app.get('/story/:title', story.view);
+app.post('/story', story.add);
 // *** app.get('/project/:name', project.viewProject);
 // Example route
 // app.get('/users', user.list);

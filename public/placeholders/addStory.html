@@ -31,18 +31,23 @@
 		    	  	</div><!-- /.navbar-collapse -->
 		  		</div><!-- /.container-fluid -->
 			</nav>
-			<div class="input-group">
- 				<span class="input-group-addon">Story Title</span>
-				<input type="text" class="form-control" placeholder="'Ode To Omosola!'">
-			</div>
 
-			<div class="input-group">
- 				<span class="input-group-addon">First Sentence: </span>
-				<input type="text" class="form-control" placeholder="Once upon a time...">
-			</div>
+			<form id = "addStoryForm" method = "post" action = "/story">
+				<div class="form-group">
+	 				<label for ="title">Story Title: </label>
+					<input type="text" class="form-control" id="title" placeholder="'Ode To Omosola!'">
+				</div>
+				<div class="form-group">
+	 				<label for="sentence1">First Sentence: </label>
+					<input type="text" class="form-control" id="sentence1" placeholder="Once upon a time...">
+				</div>
 
-			<a href="success.html"><button type="button">Add Story</button></a>
+			<button id = "submitBtn" type="submit">Add Story</button>
 			<a href="/"><button type="button">Cancel</button></a>
 		</div>
+	</form>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/addStory.js"></script>
 	</body>
 </html>
