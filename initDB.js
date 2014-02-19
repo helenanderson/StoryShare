@@ -25,10 +25,10 @@ mongoose.connect(database_uri);
 // Do the initialization here
 
 // Step 1: load the JSON data
-var projects_json = require('./storyData.json');
+var projects_json = require('./stories.json');
 
 // Step 2: Remove all existing documents
-models.Project
+models.Story
   .find()
   .remove()
   .exec(onceClear); // callback to continue at
@@ -42,7 +42,7 @@ function onceClear(err) {
   var to_save_count = projects_json.length;
   for(var i=0; i<projects_json.length; i++) {
     var json = projects_json[i];
-    var proj = new models.Project(json);
+    var proj = new models.Story(json);
 
     proj.save(function(err, proj) {
       if(err) console.log(err);

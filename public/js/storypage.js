@@ -1,16 +1,21 @@
 'use strict';
+/* This javascript file is to control the buttons on the StoryPage 
+ * where the individual story is displayed. */
+
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
 })
 
+//Adds click-listeners to the page for the various buttons
 function initializePage() {
 	console.log("Javascript connected!");
 	$('#addBtn').click(addToStoryInit);
 	$('#upVote').click(UpVote);
 	$('#downVote').click(DownVote);
 
+//This is just a little debugging code to log relevant info about the story.
 // 	var story = $("#story1").text();
 // 	//var numSentences = $(this.".sentences");
 // 	//if (numSentences == 10) console.log("The Story is complete.");
@@ -19,12 +24,19 @@ function initializePage() {
 // }
 }
 
+/* Controls the addToStory button. Replaces the button with a form button and 
+ * text box once clicked. Then listens for the form to be submitted, and once submitted
+ * call the addToStory function (below).
+ */
 function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
 	$(this).replaceWith("<form id ='textToAddForm'><input type='text'id='textToAdd' placeholder='Type Text Here!'><input type= 'submit' value='Add!'></form>");
 	$('#textToAddForm').submit(addToStory);
 }
 
+/* Appends the text to the story, and parses it at the first sentence. Does not YET make a persistant
+ * change to the story.
+ */
 function addToStory(e) {
 	e.preventDefault();
 	console.log("Add To Story Button clicked!");

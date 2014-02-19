@@ -7,11 +7,12 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'); //requiring mongoose for database
 
 var main = require('./routes/main');
 var story = require('./routes/story');
 
+//setting up the database
 var local_database_name = 'storyshare';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
@@ -42,10 +43,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', main.view);
 app.get('/story/:title', story.view);
-app.post('/story', story.add);
-// *** app.get('/project/:name', project.viewProject);
-// Example route
-// app.get('/users', user.list);
+app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
