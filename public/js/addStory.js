@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-	$('#submitBtn').click(NewStory);
+	//$('#submitBtn').click(NewStory);
 }
 
 // function listenerFunction(e){
@@ -17,16 +17,16 @@ function initializePage() {
 // 	console.log(name);
 // }
 
-function NewStory(e) {
-	console.log("add button clicked.");
-	var title = $('#title').val();
-	var sentence = $('#sentence1');
-	var json = {
-		'title':title,
-		'sentences': 1,
-		'text':sentence,
-		'votes':0,
-	};
-	console.log(json);
-	// $.post('/story', json);
-}
+// function NewStory(e) {
+// 	console.log("add button clicked.");
+// 	var title = $('#title').val();
+// 	var sentence = $('#sentence1');
+// 	var json = {
+// 		'title':title,
+// 		'sentences': 1,
+// 		'text':sentence,
+// 		'votes':0,
+// 	};
+// 	console.log(json);
+// 	// $.post('/story', json);
+// }

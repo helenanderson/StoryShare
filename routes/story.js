@@ -10,8 +10,19 @@ exports.view = function(req, res){
 };
 
 exports.add = function (req, res){
-	//console.log(req.params.title);
 	console.log("We're trying to add...");
-	res.json({});
+	story_data = req.body;
+	var newStory = new model.Story({
+		"title":story_data.title,
+		"sentences":1,
+		"text":story_data.sentence1,
+		"votes":0
+	});
+	newStory.save(afterSave);
+	function afterSave(err){
+		if(err){console.log(err); res.send(500);}
+		console.log("Save Success?");
+		res.send(200);
+	}
 	// res.redirect('/placeholders/success.html')
 }

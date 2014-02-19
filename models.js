@@ -8,5 +8,5 @@ var StorySchema = new Mongoose.Schema({
 	"votes": Number
 });
 
-exports.Project = Mongoose.model('Story', StorySchema);
+exports.Story = Mongoose.model('Story', StorySchema);
 
