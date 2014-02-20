@@ -1,6 +1,12 @@
-var data = require( '../storyData.json');
+var models = require( '../models');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render("mainpage", data);
+	models.Story
+		.find()
+		.sort()
+		.exec(renderStories);
+	
+	function renderStories(err, stories) {
+		res.render('mainpage', {'story': stories});
+	}
 };
