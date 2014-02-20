@@ -22,7 +22,7 @@ exports.add = function (req, res){
 	function afterSave(err){
 		if(err){console.log(err); res.send(500);}
 		console.log("Save Success?");
-		res.send(200);
+		res.redirect("/");
 	}
 	// res.redirect('/placeholders/success.html')
 }
