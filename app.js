@@ -42,10 +42,10 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', main.view);
-app.get('/story/:title', story.view);//This displays the individual stories after clicking their thumbnail.
+app.get('/story/:id', story.view);//This displays the individual stories after clicking their thumbnail.
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
-app.get('/story')
-
+app.post('/story/update/:id', story.update);
+// 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
