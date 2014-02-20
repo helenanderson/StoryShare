@@ -35,19 +35,21 @@
 			</nav>
 
 
-
-		{{#each story}}
-			<div class="story" id="sample">
-				<a href="/story/{{title}}"><h><img class="thumb img-rounded" src="images/W.jpg">
+<!-- iterates through the stories passed in from the database and renders their thumbnails. -->
+<!-- Graham said not to use A-tags for linking, but I can't make this work without one. I guess that's that... -->
+		{{#each story}} 
+			<div class="story" id="{{id}}">
+				<a href="/story/{{id}}"><h><img class="thumb img-rounded" src="images/W.jpg">
 				<div class="titleprog">
-					<span style="overflow:hidden">{{title}}</span></h></a>
+					<span style="overflow:hidden">{{title}}</span></h>
 				</div>
-			</div>
+			</div></a>
 		{{/each}}
 	
 		</div>
 		<script src="js/jquery-1.11.0.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/storyshare.js"></script>
+		<script src="js/mainpage.js"></script>
 	</body>
 </html>
