@@ -41,8 +41,19 @@ exports.add = function (req, res){
 };
 
 exports.update = function(req, res){
-	var newSentence = req.body;
-	console.log(newSentence);
-	
+	var newText = req.body;
+	console.log(newText);
+	var ID = req.params.id;
+	models.Story
+		.find({"_id":ID})
+		.update(
+			{"text" :newText},
+			{$inc:{"sentences":1}})
+		.exec(afterUpdating);
 
+	function afterUpdating(err, doc) {
+		if(err) {console.log(err); res.send(500);}
+		console.log(doc);
+		res.redirect('/');
+	}
 };

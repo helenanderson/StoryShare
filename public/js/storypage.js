@@ -30,38 +30,33 @@ function initializePage() {
  */
 function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
-	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update'><div class='form-group'><input type='text' name = 'text' id='textToAdd' placeholder='Type Text Here!'></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
-	// $('#textToAddForm').submit(addToStory);
+	var ID = window.location.pathname.match(/\/story\/(.*)/)[1];
+	console.log(ID);
+	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><input type='text' name = 'text' id='textToAdd' placeholder='Type Text Here!'></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
+	$('#textToAddForm').submit(addToStory);
 }
 
 /* Appends the text to the story, and parses it at the first sentence. Does not YET make a persistant
  * change to the story.
  */
 function addToStory(e) {
-	e.preventDefault();
 	console.log("Add To Story Button clicked!");
 	var newText = $("#textToAdd").val()
-	// console.log(newText);
-	if (newText == "") 
-		{
-			$(this).append("<p>No text entered. Please try again.");
-			return;
-		}
 
-	var q_index = newText.indexOf("\?");
-	var p_index = newText.indexOf(".");
-	var e_index = newText.indexOf("!");
-	var index = minimum(e_index, minimum(p_index, q_index));
-
-	if (index == -1) {
-		$("#text").text($("#text").text() + " " + newText + ".");
-		$("#textToAddForm").hide();
-		return;
-	}
-	index++;
-	newText = newText.substring(0, index);
-	$("#text").text($("#text").text() + " " + newText);
-	$("#textToAddForm").hide();
+	// var q_index = newText.indexOf("\?");
+	// var p_index = newText.indexOf(".");
+	// var e_index = newText.indexOf("!");
+	// var index = minimum(e_index, minimum(p_index, q_index));
+	// if (index == -1) {
+	// 	$("#text").text($("#text").text() + " " + newText + ".");
+	// 	$("#textToAddForm").hide();
+	// 	return;
+	// }
+	$("#textToAdd").val($("#text").text() + " " + newText);
+	// index++;
+	// newText = newText.substring(0, index);
+	// $("#text").text($("#text").text() + " " + newText);
+	//$("#textToAddForm").hide();
 }
 
 function UpVote(e) {
