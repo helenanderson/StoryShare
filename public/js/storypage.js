@@ -30,8 +30,8 @@ function initializePage() {
  */
 function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
-	$(this).replaceWith("<form id ='textToAddForm'><input type='text'id='textToAdd' placeholder='Type Text Here!'><input type= 'submit' value='Add!'></form>");
-	$('#textToAddForm').submit(addToStory);
+	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update'><div class='form-group'><input type='text' name = 'text' id='textToAdd' placeholder='Type Text Here!'></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
+	// $('#textToAddForm').submit(addToStory);
 }
 
 /* Appends the text to the story, and parses it at the first sentence. Does not YET make a persistant

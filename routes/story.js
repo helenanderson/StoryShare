@@ -24,7 +24,7 @@ exports.view = function(req, res){
 
 exports.add = function (req, res){
 	console.log("We're trying to add...");
-	story_data = req.body;
+	var story_data = req.body;
 	var newStory = new models.Story({
 		"title":story_data.title,
 		"sentences":1,
@@ -38,4 +38,11 @@ exports.add = function (req, res){
 		res.redirect("/");
 	}
 	// res.redirect('/placeholders/success.html')
-}
+};
+
+exports.update = function(req, res){
+	var newSentence = req.body;
+	console.log(newSentence);
+	
+
+};
