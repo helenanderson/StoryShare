@@ -12,6 +12,7 @@ var mongoose = require('mongoose'); //requiring mongoose for database
 var main = require('./routes/main');
 var story = require('./routes/story');
 var help = require('./routes/help');
+var about = require('./routes/about');
 
 //setting up the database
 var local_database_name = 'storyshare';
@@ -44,7 +45,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', main.view);
 app.get('/story/:id', story.view);//This displays the individual stories after clicking their thumbnail.
-app.get('/help', help.view)
+app.get('/help', help.view);
+app.get('/about', about.view);
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
 app.post('/story/update/:id', story.update);
 // 
