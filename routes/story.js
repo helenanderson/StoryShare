@@ -41,19 +41,34 @@ exports.add = function (req, res){
 };
 
 exports.update = function(req, res){
-	var newText = req.body;
+	var newText = req.body.text;
 	console.log(newText);
 	var ID = req.params.id;
-	models.Story
-		.find({"_id":ID})
-		.update(
-			{"text" :newText},
-			{$inc:{"sentences":1}})
-		.exec(afterUpdating);
+	console.log(ID);
+	var conditions = {"_id":ID};
+	var update = {"text" : newText, $inc:{"sentences":1}};
+	var options = {multi: false};
+	models.Story.update(conditions, update, options, afterUpdating);
+	// models.Story
+	// 	.find({"_id":ID})
+	// 	.update(
+	// 		{"text" :newText,
+	// 		$inc:{"sentences":1}})
+	// 	.exec(afterUpdating);
 
+	// models.Story.findOne({'_id': ID}, function (err, doc){
+	// 	console.log(doc);
+	// 	console.log("yo");
+	// 	console.log(newText);
+	// 	doc.text = newText;
+	// 	doc.sentences = doc.sentences + 1;
+	// 	doc.save();
+	// 	console.log(doc);
+	//res.redirect('/');
+	//});
 	function afterUpdating(err, doc) {
 		if(err) {console.log(err); res.send(500);}
 		console.log(doc);
 		res.redirect('/');
-	}
+	 }
 };
