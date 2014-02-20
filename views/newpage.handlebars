@@ -1,0 +1,38 @@
+<!-- This page is a placeholder for the 'addStory' page for when the user tries to add a story.-->
+<html>
+	<head>
+		<title>New Story</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/jquery-1.11.0.js"></script>
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<script src="../js/bootstrap.min.js"></script>
+		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../css/storyshareformat.css" rel="stylesheet"> 
+		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+		<script src="HTMLImports/html-imports.js"></script>
+	</head>
+	<body>
+
+			{{> banner}}
+<div class="container">
+<!-- 			This is the form for entering information. -->
+			<form id = "addStoryForm" method = "post" action = "/story">
+				<div class="form-group">
+	 				<label for ="title">Story Title: </label>
+					<input type="text" class="form-control" id="title" name = "title" placeholder="Story Title"> <!--'id' is for css formatting, 'name' is for getting info from the form. DON'T CHANGE THE NAME! -->
+				</div>
+				<div class="form-group">
+	 				<label for="sentence1">First Sentence: </label>
+					<input type="text" class="form-control" id="sentence1" name = "sentence1" placeholder="This is the first line of the story."> <!--'id' is for css formatting, 'name' is for getting info from the form. DON'T CHANGE THE NAME! -->
+				</div>
+				<button id = "submitBtn" type="submit">Add Story</button>
+				<a href="/"><button type="button">Cancel</button></a>
+			</form>
+		</div>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/addStory.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
