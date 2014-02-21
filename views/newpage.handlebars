@@ -13,21 +13,24 @@
 		<script src="HTMLImports/html-imports.js"></script>
 	</head>
 	<body>
+	<div class="span7 text-center"><p>
+		<font size="7">Create a New Story!</font></p>
+	</div>
 
 			{{> banner}}
 <div class="container">
 <!-- 			This is the form for entering information. -->
 			<form id = "addStoryForm" method = "post" action = "/story">
 				<div class="form-group">
-	 				<label for ="title">Story Title: </label>
+	 				<label for ="title" class = "form-label">Story Title: </label>
 					<input type="text" class="form-control" id="title" name = "title" placeholder="Story Title"> <!--'id' is for css formatting, 'name' is for getting info from the form. DON'T CHANGE THE NAME! -->
 				</div>
 				<div class="form-group">
-	 				<label for="sentence1">First Sentence: </label>
+	 				<label for="sentence1" class = "form-label">First Sentence: </label>
 					<input type="text" class="form-control" id="sentence1" name = "sentence1" placeholder="This is the first line of the story."> <!--'id' is for css formatting, 'name' is for getting info from the form. DON'T CHANGE THE NAME! -->
 				</div>
-				<button id = "submitBtn" type="submit">Add Story</button>
-				<a href="/"><button type="button">Cancel</button></a>
+				<button id = "submitBtn" type="submit"><font size="5">Add Story</font></button>
+				<a href="/"><button type="button"><font size="5">Cancel</font></button></a>
 			</form>
 		</div>
 		<script src="/js/jquery-1.11.0.js"></script>
