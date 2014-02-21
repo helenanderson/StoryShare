@@ -30,10 +30,12 @@
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
 			
 			{{#if finished}}
+				<div class="span7 text-center">
 				<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Add to Story</button>
+			</div>
 			{{/if}}
 
-			 <h4> <button id="upVote" type="button" class="btn btn-default">Up Vote</button> <span id="votes">{{votes}}</span><button id="downVote" type="button" class="btn btn-default">Down Vote</button></h4>
+			 <h4> <button id="upVote" type="button" class="btn btn-default btn-sm">Up Vote</button> <span id="votes">{{votes}}&nbsp</span><button id="downVote" type="button" class="btn btn-default btn-sm">Down Vote</button></h4>
 		</div>
 
 	<!-- Add the "back button" -->
