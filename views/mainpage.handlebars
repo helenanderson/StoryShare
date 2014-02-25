@@ -30,6 +30,7 @@
 <!-- iterates through the stories passed in from the database and renders their thumbnails. -->
 <!-- Graham said not to use A-tags for linking, but I can't make this work without one. I guess that's that... -->
 		{{#each story}} 
+			{{#unless finished}}
 			<div class="story" id="{{id}}">
 				<a href="/story/{{id}}"><h><img class="thumb" src="images/A.png">
 
@@ -37,6 +38,7 @@
 					<span style="overflow:hidden" class="storytitle">{{title}}</span></h>
 				</div>
 			</div></a>
+			{{/unless}}
 		{{/each}}
 	
 		</div>
