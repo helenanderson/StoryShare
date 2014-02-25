@@ -49,10 +49,8 @@ exports.update = function(req, res){
 	var update = {"text" : newText, $inc:{"sentences":1}};
 	var options = {multi: false};
 	models.Story.update(conditions, update, options, afterUpdating);
-
 	function afterUpdating(err, doc) {
 		if(err) {console.log(err); res.send(500);}
-		console.log(doc);
 		res.redirect('/');
 	 }
 };
