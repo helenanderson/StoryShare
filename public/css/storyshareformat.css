@@ -1,7 +1,7 @@
 .banner{
      /*position:relative;
-     width: 480px; 
-     height: 120px; */
+     width: 480px; */
+     height: 120px; 
      background-image: url("../images/linedpaper.jpg");
      background-size: cover;
      margin-bottom: 0px;
@@ -10,7 +10,7 @@
 h1 {  
      font-family: 'Mrs Sheppards', cursive;
      text-align: center;
-     font-size: 80px;
+     font-size: 50px;
 }
 
 .menuPageLine {
