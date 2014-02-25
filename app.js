@@ -14,6 +14,8 @@ var story = require('./routes/story');
 var help = require('./routes/help');
 var about = require('./routes/about');
 var newstory = require('./routes/add');
+var archive = require('./routes/archive');
+
 
 //setting up the database
 var local_database_name = 'storyshare';
@@ -47,6 +49,8 @@ if ('development' == app.get('env')) {
 app.get('/', main.view);
 app.get('/story/:id', story.view);//This displays the individual stories after clicking their thumbnail.
 app.get('/help', help.view);
+//maggie added next line
+app.get('/archive', archive.view);
 app.get('/about', about.view);
 app.get('/new', newstory.view);
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
