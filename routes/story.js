@@ -35,7 +35,7 @@ exports.add = function (req, res){
 	function afterSave(err){
 		if(err){console.log(err); res.send(500);}
 		console.log("Save Success?");
-		res.redirect("/");
+		res.redirect("/main");
 	}
 	// res.redirect('/placeholders/success.html')
 };
@@ -51,6 +51,6 @@ exports.update = function(req, res){
 	models.Story.update(conditions, update, options, afterUpdating);
 	function afterUpdating(err, doc) {
 		if(err) {console.log(err); res.send(500);}
-		res.redirect('/');
+		res.redirect('/story/'+ID);
 	 }
 };
