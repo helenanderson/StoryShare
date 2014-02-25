@@ -46,7 +46,8 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', main.view);
+app.get('/main', main.view);
+app.get('/', about.view);
 app.get('/story/:id', story.view);//This displays the individual stories after clicking their thumbnail.
 app.get('/help', help.view);
 //maggie added next line
