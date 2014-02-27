@@ -32,9 +32,20 @@ function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
 	var ID = window.location.pathname.match(/\/story\/(.*)/)[1];
 	console.log(ID);
-	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><input type='text' name = 'text' id='textToAdd' placeholder='What happens next?'></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
+	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><textarea name = 'text' id='textToAdd' placeholder='What happens next?'></textarea><div class='count'></div></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
 	$('#textToAddForm').submit(addToStory);
+
+	$(function() {
+	    $("#textToAdd").characterCounter({
+			counterCssClass: 'count',
+			limit: 150
+		});
+ 	});
+	
 }
+
+
+
 
 /* Appends the text to the story, and parses it at the first sentence. Does not YET make a persistant
  * change to the story.
@@ -58,6 +69,8 @@ function addToStory(e) {
 	// $("#text").text($("#text").text() + " " + newText);
 	//$("#textToAddForm").hide();
 }
+
+
 
 function UpVote(e) {
 	// console.log("upvote");
