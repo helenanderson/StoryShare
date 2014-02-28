@@ -16,7 +16,8 @@
 	<body>
 
 
-		 
+		  {{> banner}}
+
 
 		<div class="container">
 
@@ -30,8 +31,8 @@
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
 			
 			{{#if finished}}
-			<div class="span7 text-center">
-				<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Add to Story</button>
+			<div class="span7">
+				<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px">Add to Story</button>
 			</div>
 			{{/if}}
 <!--
@@ -42,14 +43,14 @@
 
 		</div>
 
-		<!--script src="https://code.jquery.com/jquery.js"></script>
+		<!--<script src="https://code.jquery.com/jquery.js"></script>-->
 		
-		<script src="../js/jquery-1.11.0.js"></script>
-		<script src="../js/bootstrap.js"></script-->
+		<!--<script src="../js/jquery-1.11.0.js"></script>-->
+		
 		<script src="../js/jquery.charactercounter.js"></script>
 		<script src="../js/storypage.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
-	
+		<script src="../js/bootstrap.js"></script>
 
 	</body>
 </html>

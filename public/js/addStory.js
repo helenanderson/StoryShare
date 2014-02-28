@@ -9,3 +9,12 @@ function initializePage() {
 	console.log("Javascript connected!");
 	//$('#submitBtn').click(NewStory);
 }
+
+
+$(function() {
+	    $("#sentence1").characterCounter({
+			counterCssClass: 'count',
+			limit: 150,
+			counterFormat: '%1 characters remaining.'
+		});
+ 	});
