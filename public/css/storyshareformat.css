@@ -1,7 +1,7 @@
 .banner{
      /*position:relative;
      width: 480px; */
-     height: 120px; 
+     height: 160px; 
      background-image: url("../images/linedpaper.jpg");
      background-size: cover;
      margin-bottom: 0px;
@@ -157,7 +157,7 @@ body {
 
 body {
      background-color: #323232;
-     padding-top: 200px;
+     padding-top: 80px;
      padding-bottom: 50px;
 } 
 
