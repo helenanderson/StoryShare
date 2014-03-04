@@ -32,11 +32,12 @@
 		{{#each story}} 
 			{{#if finished}}
 			<div class="story" id="{{id}}">
-				<a href="/story/{{id}}"><h><img class="thumb" src="images/A.png">
+				<span class="col-xs-3 col-sm-1 thumbicon"><a href="/story/{{id}}"><h><img class="thumb" src="images/A.png"></span>
 
-				<div class="titleprog">
-					<span style="overflow:hidden" class="storytitle">{{title}}</span></h>
-				</div>
+
+				<span class= "col-xs-9 col-sm-11 titleprog">
+					<span class="storytitle">{{title}}</span>
+				</span>
 			</div></a>
 			{{/if}}
 		{{/each}}

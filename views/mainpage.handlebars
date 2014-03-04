@@ -22,7 +22,7 @@
 				<p><font size="5">Collaborate</font><br>
 				<font size="2">Click on a story to add to it</font></p><br>
 	</div>
-	<div class="container">
+	<div class="container">x
 
 
 
@@ -32,13 +32,13 @@
 		{{#each story}} 
 			{{#unless finished}}
 			<div class="story" id="{{id}}">
-				<a href="/story/{{id}}"><h><img class="thumb" src="images/A.png">
+				<span class="col-xs-3 col-sm-1 thumbicon"><a href="/story/{{id}}"><h><img class="thumb" src="images/A.png"></span>
 
 
-				<div class="titleprog">
-					<span style="overflow:hidden" class="storytitle">{{title}}</span>
+				<span class= "col-xs-9 col-sm-11 titleprog">
+					<span class="storytitle">{{title}}</span>
 					<div align = "justify"><font size = "2" color = "white">Contributors: </font><font size = "4" color = "white">{{sentences}}</font></h></div>
-				</div>
+				</span>
 			</div></a>
 			{{/unless}}
 		{{/each}}
