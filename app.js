@@ -53,7 +53,7 @@ app.get('/help', help.view);
 //maggie added next line
 app.get('/archive', archive.view);
 app.get('/about', about.view);
-app.get('/new', newstory.view);
+app.get('/new', newstory.view); //Where does this get called?
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
 app.post('/story/update/:id', story.update);
 // 

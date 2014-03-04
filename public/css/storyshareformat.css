@@ -214,3 +214,13 @@ p {
     margin: 5px;
 }
 
+.helpLink h6 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.helplink {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+}
