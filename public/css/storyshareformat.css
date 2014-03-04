@@ -11,6 +11,8 @@ h1 {
      font-family: 'Mrs Sheppards', cursive;
      text-align: center;
      font-size: 60px;
+     margin-top: 0px;
+     line-height: 2;
 }
 
 .menuPageLine {
@@ -60,7 +62,7 @@ h1 {
     display: block;
 }
 
-/*
+
 .jumbotron {
      position: relative;
      background: none;
@@ -80,7 +82,7 @@ h1 {
      right: 0;
      position: absolute;
      z-index: -1;   
-}
+} 
 
 .btn-group {
      padding-top: 40px;
@@ -108,7 +110,8 @@ h1 {
 
 body {
      background-color: #323232;
-}*/
+}
+
 
 
 .nav-link:link
@@ -163,24 +166,39 @@ body {
     /* display: inline-block; */
 }
 
+
+
 .landing-page {
-    background-image: url("../images/linedpaper.jpg");
+    /*background-image: url("../images/linedpaper.jpg");*/
+    /*background-color: color: #323232;;*/
     background-size: cover;
     margin-top: 0px;
 }
 
 .landing-page p {
+    color: white;
+}
+
+.landing-page h1 {
     color: #323232;
+}
+
+.landing-page h5 {
+    color: white;
 }
 
 
 
 body {
      background-color: #323232;
-     margin-top: 80px;
+     margin-top: 20px;
      margin-bottom: 50px;
 } 
 
+
+/*h1 {
+    font-color: #323232;
+}*/
 h2 {
      color: white;
      font-weight: bold;
