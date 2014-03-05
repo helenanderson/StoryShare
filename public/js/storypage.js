@@ -32,7 +32,7 @@ function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
 	var ID = window.location.pathname.match(/\/story\/(.*)/)[1];
 	console.log(ID);
-	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><textarea name = 'text' id='textToAdd' style='width: 100%' rows='4' cols='40' maxlength='150' placeholder='What happens next?'></textarea><span class='count'></span></div><button id = 'submitBtn' type='submit'>Add!</button></form>");
+	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><textarea name = 'text' id='textToAdd' style='width: 100%' rows='4' cols='40' maxlength='150' placeholder='What happens next?'></textarea><span class='count'></span></div><button id = 'submitBtn' type='submit'>Add!</button><div><span></form>");
 	$('#textToAddForm').submit(addToStory);
 
 	$(function() {

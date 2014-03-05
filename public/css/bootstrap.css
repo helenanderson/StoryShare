@@ -107,7 +107,9 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-button,
+button {
+  color: #357ebd;
+}
 input,
 optgroup,
 select,
@@ -278,7 +280,9 @@ body {
   background-color: #ffffff;
 }
 input,
-button,
+button {
+  font-size: 24;
+}
 select,
 textarea {
   font-family: inherit;
@@ -2317,7 +2321,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
+  padding: 5px 8px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
