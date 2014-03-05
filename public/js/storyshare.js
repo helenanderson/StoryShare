@@ -6,9 +6,18 @@ $(document).ready(function() {
 })
 
 function initializePage() {
+	ga("send", "event", "button", "click");
+	//$('#startWritingBtn').click(startWriting);
 	console.log("Javascript connected!");
 }
 
+
+/*function StartWriting(e) {
+		ga("send", "event", "button", "click");
+		res.render('mainpage', version)
+ 	});*/
+
+	
 // function listenerFunction(e){
 // 	console.log("Title Clicked");
 // 	e.preventDefault();
