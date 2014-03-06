@@ -6,15 +6,19 @@ $(document).ready(function() {
 })
 
 function initializePage() {
+
+console.log("page initialized!");
+
+
 	$("#startWriting").click(startWritingClick);
 	$("#addToStory").click(addToStoryClick);
 	$("#startNewStory").click(startNewStoryClick);
 	$("#helpLanding").click(helpLandingClick);
-	$("#bookIcon").click(bookIconClick);
+	
+
+	/*$("#bookIcon").click(bookIconClick);
 	$("#pencilIcon").click(pencilIconClick);
-	$("#plusIcon").click(plusIconClick);
-	
-	
+	$("#plusIcon").click(plusIconClick);*/
 	
 	
 	
@@ -27,25 +31,47 @@ function initializePage() {
 	//ga("send", "event", "ArchiveMenuBtn", "click");
 	//ga("send", "event", "NewStoryMenuBtn", "click");
 	//$('#startWritingBtn').click(startWriting);
-	console.log("Javascript connected!");
+	
 }
 
 function startWritingClick(e) {
-	ga("send", "event", "StartWritingButton", "click");
+    e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
+    ga("send", "event", "StartWritingButton", "click", { 'hitCallback':mainLink }  );
 }
 
 function addToStoryClick(e) {
-	ga("send", "event", "AddToStoryBtn", "click");
+    e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
+    ga("send", "event", "AddToStoryBtn", "click", { 'hitCallback':mainLink } );
 }
+
+function mainLink() {
+    window.location.replace("/main");
+}
+
 
 function startNewStoryClick(e) {
-	ga("send", "event", "StartNewStoryBtn", "click");
+    e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
+    ga("send", "event", "StartNewStoryBtn", "click", { 'hitCallback':addLink } );
 }
+
+function addLink() {
+    window.location.replace("/new");
+}
+
 
 function helpLandingClick(e) {
-	ga("send", "event", "helpLandingBtn", "click");
+    e.preventDefault();
+    ga('send', 'event', 'helpLandingBtn', 'click', { 'hitCallback':helpLink } );
 }
 
+function helpLink() {
+    window.location.replace("/help");
+}
+
+/*
 function bookIconClick(e) {
 	ga("send", "event", "bookIconBtn", "click");
 }
@@ -58,6 +84,7 @@ function plusIconClick(e) {
 	ga("send", "event", "plusIconBtn", "click");
 }
 
+*/
 /*function StartWriting(e) {
 		ga("send", "event", "button", "click");
 		res.render('mainpage', version)
