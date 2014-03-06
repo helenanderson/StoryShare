@@ -1,6 +1,24 @@
 var models = require( '../models');
 
 exports.view = function(req, res){
+	
+	models.Story
+		.find()
+		.sort()
+		.exec(renderStories);
+	
+	function renderStories(err, stories) {
+		for (var i = 0; i < stories.length; i++) {
+			var story = stories[i];
+			story["finished"]=story.sentences > 9;
+
+		}
+		res.render('archivepage', {'story': stories, 'showVersionB': false});
+	}
+};
+
+exports.viewVersionB = function(req, res){
+	
 	models.Story
 		.find()
 		.sort()
@@ -11,7 +29,6 @@ exports.view = function(req, res){
 			var story = stories[i];
 			story["finished"]=story.sentences > 9;
 		}
-		
-		res.render('archivepage', {'story': stories});
+		res.render('archivepage', {'story': stories, 'showVersionB': true});
 	}
 };

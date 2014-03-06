@@ -12,5 +12,4 @@ exports.viewVersionB = function(req, res){
 
 		var version = {'showVersionB': true};
 		res.render('aboutpage', version);
-
-}
+};
