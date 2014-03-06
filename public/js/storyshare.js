@@ -36,11 +36,13 @@ console.log("page initialized!");
 
 function startWritingClick(e) {
     e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
     ga("send", "event", "StartWritingButton", "click", { 'hitCallback':mainLink }  );
 }
 
 function addToStoryClick(e) {
     e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
     ga("send", "event", "AddToStoryBtn", "click", { 'hitCallback':mainLink } );
 }
 
@@ -51,6 +53,7 @@ function mainLink() {
 
 function startNewStoryClick(e) {
     e.preventDefault();
+    ga("send", "event", "LandingButton", "click");
     ga("send", "event", "StartNewStoryBtn", "click", { 'hitCallback':addLink } );
 }
 
