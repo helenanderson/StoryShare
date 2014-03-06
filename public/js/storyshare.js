@@ -14,9 +14,11 @@ console.log("page initialized!");
 	$("#addToStory").click(addToStoryClick);
 	$("#startNewStory").click(startNewStoryClick);
 	$("#helpLanding").click(helpLandingClick);
-	$("#bookIcon").click(bookIconClick);
+	
+
+	/*$("#bookIcon").click(bookIconClick);
 	$("#pencilIcon").click(pencilIconClick);
-	$("#plusIcon").click(plusIconClick);
+	$("#plusIcon").click(plusIconClick);*/
 	
 	
 	
@@ -66,7 +68,7 @@ function helpLink() {
     window.location.replace("/help");
 }
 
-
+/*
 function bookIconClick(e) {
 	ga("send", "event", "bookIconBtn", "click");
 }
@@ -79,6 +81,7 @@ function plusIconClick(e) {
 	ga("send", "event", "plusIconBtn", "click");
 }
 
+*/
 /*function StartWriting(e) {
 		ga("send", "event", "button", "click");
 		res.render('mainpage', version)
