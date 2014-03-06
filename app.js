@@ -51,22 +51,22 @@ app.get('/', about.view);
 app.get('/versionB', about.viewVersionB);
 
 app.get('/main', main.view);
-app.get('/mainB', main.viewVersionB);
+//app.get('/mainB', main.viewVersionB);
 
 
 app.get('/story/:id', story.view);//This displays the individual stories after clicking their thumbnail.
-app.get('/story/:idB', story.viewVersionB);
+//app.get('/story/:idB', story.viewVersionB);
 
 app.get('/help', help.view);
-app.get('/helpB', help.viewVersionB);
+//app.get('/helpB', help.viewVersionB);
 
 app.get('/archive', archive.view);
-app.get('/archiveB', archive.viewVersionB);
+//app.get('/archiveB', archive.viewVersionB);
 
 app.get('/about', about.view);
 
 app.get('/new', newstory.view); //Where does this get called?
-app.get('/newB', newstory.viewVersionB);
+//app.get('/newB', newstory.viewVersionB);
 
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
 app.post('/story/update/:id', story.update);
