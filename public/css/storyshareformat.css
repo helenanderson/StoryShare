@@ -7,6 +7,12 @@
      margin-bottom: 0px;
 }
 
+.navbartitle {
+    font-family: 'Mrs Sheppards', cursive;
+    text-align: center;
+    font-size: 30px;
+}
+
 h1 {  
      font-family: 'Mrs Sheppards', cursive;
      text-align: center;

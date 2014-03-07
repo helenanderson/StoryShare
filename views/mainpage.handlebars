@@ -10,6 +10,7 @@
 		<link href="../css/storyshareformat.css" rel="stylesheet"> 
 		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
 		<script src="HTMLImports/html-imports.js"></script>
+	
 	</head>
 	</head>
 
@@ -32,7 +33,7 @@
 		{{#each story}} 
 			{{#unless finished}}
 			<div class="story" id="{{id}}">
-				<span class="col-xs-3 col-sm-1 thumbicon"><a href="/story/{{id}}"><h><img class="thumb" src="images/A.png"></span>
+				<span class="col-xs-3 col-sm-1 thumbicon"><a href="/story/{{id}}"><h><img class="thumb" src= "images/{{sentences}}-10.png"></span>
 
 
 				<span class= "col-xs-9 col-sm-11 titleprog">
@@ -57,7 +58,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48462616-2', 'storyshare.herokuapp.com');
+  ga('create', 'UA-48462616-2', {'cookieDomain': 'none'});
   ga('send', 'pageview');
 
 </script>
