@@ -7,10 +7,16 @@
      margin-bottom: 0px;
 }
 
+
 .navbartitle {
     font-family: 'Mrs Sheppards', cursive;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 3px;
+    text-decoration: none;
+    border-bottom-style: none;
+   
 }
 
 h1 {  
@@ -45,6 +51,16 @@ h1 {
     white-space:nowrap;
     text-overflow:ellipsis;
   
+}
+
+.storypreview {
+    color: white;
+    font-size: 14px;
+    max-width: 100%;
+    overflow:hidden;
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
 }
 
 .thumbicon {

@@ -37,8 +37,9 @@
 
 
 				<span class= "col-xs-9 col-sm-11 titleprog">
-					<span class="storytitle">{{title}}</span>
-					<div align = "justify"><font size = "2" color = "white">Contributors: </font><font size = "4" color = "white">{{sentences}}</font></h></div>
+					<div class="storytitle">{{title}}</div>
+					<div class="storypreview">{{text}}</div>
+					<!--<div align = "justify"><font size = "2" color = "white">Contributors: </font><font size = "4" color = "white">{{sentences}}</font></h></div>-->
 				</span>
 			</div></a>
 			{{/unless}}
@@ -58,7 +59,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48462616-2', {'cookieDomain': 'none'});
+  ga('create', 'UA-48462616-2', 'storyshare.herokuapp.com');
   ga('send', 'pageview');
 
 </script>
