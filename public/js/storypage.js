@@ -51,9 +51,12 @@ function addToStoryInit(e) {
 	
 }
 
+//When Cancel button is clicked, form disappears (returns to Story page)
 function goBack(e) {
 	console.log("Cancel Button clicked!");
-	window.location='/main';
+	var ID = window.location.pathname.match(/\/story\/(.*)/)[1];
+	console.log(ID);
+	window.location=ID;
 }
 
 
