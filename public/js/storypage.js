@@ -32,8 +32,14 @@ function addToStoryInit(e) {
 	console.log("AddToStory button clicked.");
 	var ID = window.location.pathname.match(/\/story\/(.*)/)[1];
 	console.log(ID);
-	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><textarea name = 'text' id='textToAdd' style='width: 100%' rows='4' cols='40' maxlength='150' placeholder='What happens next?'></textarea><span class='count'></span></div><button id = 'submitBtn' class='btn btn-primary btn-lg' style = 'margin-top: 10px' type='submit'>Add!</button><div><span></form>");
+	$(this).replaceWith("<form id ='textToAddForm' method ='post' action = '/story/update/"+ID+"'><div class='form-group'><textarea name = 'text' id='textToAdd' style='width: 100%' rows='8' cols='40' maxlength='150' placeholder='What happens next?'></textarea><span class='count'></span></div><button id = 'submitBtn' class='btn btn-primary btn-lg' style = 'margin-top: 10px' type='submit'>Add!</button><button id = 'cancelBtn' class='btn btn-primary btn pull-right btn-lg' style = 'margin-top: 10px' value= 'click' onClick='goBack()' type='button'>Cancel</button></form><div><span>");
+	//The next two lines remove the back button because it is replaced by a cancel  
+	//button (see line above) that links to a different page
+	var backBtn = document.getElementById('backBtn');
+ 	backBtn.parentNode.removeChild(backBtn);
+
 	$('#textToAddForm').submit(addToStory);
+
 
 	$(function() {
 	    $("#textToAdd").characterCounter({
@@ -45,6 +51,10 @@ function addToStoryInit(e) {
 	
 }
 
+function goBack(e) {
+	console.log("Cancel Button clicked!");
+	window.location='/main';
+}
 
 
 
