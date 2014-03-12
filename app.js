@@ -15,6 +15,7 @@ var help = require('./routes/help');
 var about = require('./routes/about');
 var newstory = require('./routes/add');
 var archive = require('./routes/archive');
+var landing = require('./routes/landing');
 
 
 //setting up the database
@@ -46,7 +47,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', about.view);
+app.get('/', landing.view);
 // Route for Google Analytics
 app.get('/versionB', about.viewVersionB);
 
@@ -62,6 +63,8 @@ app.get('/help', help.view);
 
 app.get('/archive', archive.view);
 //app.get('/archiveB', archive.viewVersionB);
+
+app.get('/landing', landing.view);
 
 app.get('/about', about.view);
 
