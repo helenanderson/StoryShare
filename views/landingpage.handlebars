@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='83060027-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+		<title>About</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/jquery-1.11.0.js"></script>
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<script src="../js/bootstrap.min.js"></script>
+		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../css/storyshareformat.css" rel="stylesheet"> 
+		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+		<script src="HTMLImports/html-imports.js"></script>
+	</head>
+
+	<body class="landing-page">
+		<div class="banner" id = "StoryBanner"><h1>StoryShare</h1></div>
+
+		
+		<div class = container>
+				
+				<br>
+				<p><font size = 5>Say goodbye to writer's block.</font></p>
+				<p>StoryShare allows you to collaborate with others to write stories, share ideas, and spark creativity, so you can finally get over that writer's block.  
+
+				Invent a new story and watch it take form.  Shape the course of an existing story.  Browse finished stories to gather ideas and inspiration.<b>
+				Discover a new way of telling stories.</b></p>
+				
+				
+
+		</div>
+		<div class="span7 text-center">
+			<div>
+				{{#if showVersionB}}
+					<!--<button id="startWritingBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px">Start Writing!</button>-->
+					<a href="/main" class="btn btn-primary btn-lg active start-button" role="button" id="startWriting" >Start Writing!</a>
+				{{else}}
+					<a href="/main" class="btn btn-primary btn-lg active start-button" role="button" id = "addToStory">Add to a Story</a><span><a href="/new" class="btn btn-primary btn-lg active start-button" role="button" id = "startNewStory">Start a New Story</a></span>
+					{{/if}}
+			</div>
+		</div>
+	<!-- 	<div>
+			<a href="/help" class="btn btn-primary btn-lg active start-button" role="button"><span class="glyphicon glyphicon-question-sign"></span></a>
+		</div> -->
+	<!-- 	<div>
+			<a href="/help" class="btn btn-primary btn-lg active start-button" role="button"><span class="glyphicon glyphicon-question-sign"> Help</span></a>
+		</div> -->
+		<div class="helpdiv">
+			<a href="/help" class="helpLink" id = "helpLanding"><h6>Help</h6></a>
+		</div>
+	
+
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/mainpage.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/storyshare.js"></script>
+
+		<!--This is the Google Analytics code-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48462616-2', 'storyshare.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+	
+		
+	</body>
+</html>
