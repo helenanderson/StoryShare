@@ -68,12 +68,22 @@ exports.update = function(req, res){
 	console.log(newText);
 	var ID = req.params.id;
 	console.log(ID);
-	var conditions = {"_id":ID};
-	var update = {"text" : newText, $inc:{"sentences":1}};
-	var options = {multi: false};
-	models.Story.update(conditions, update, options, afterUpdating);
-	function afterUpdating(err, doc) {
+	models.Story.find({"_id" : ID}).exec(afterFinding);
+
+	function afterFinding(err, stories)	{
+		if(err) console.log(err);
+		console.log(stories[0]);
+		var story = stories[0];
+		var oldText = story["text"];
+		console.log("New Text: " + newText);
+		console.log("Old Text: " + oldText);
+		var conditions = {"_id":story["_id"]};
+		var options = {multi: false};
+		var update = {"text" : oldText + " " + newText, $inc:{"sentences":1}};
+		models.Story.update(conditions, update, options, afterUpdating);
+		function afterUpdating(err, doc) {
 		if(err) {console.log(err); res.send(500);}
 		res.redirect('/story/'+ID);
+	 }
 	 }
 };

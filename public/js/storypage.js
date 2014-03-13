@@ -14,6 +14,7 @@ function initializePage() {
 	$('#addBtn').click(addToStoryInit);
 	$('#upVote').click(UpVote);
 	$('#downVote').click(DownVote);
+	$('#emptyTxt').hide();
 
 //This is just a little debugging code to log relevant info about the story.
 // 	var story = $("#story1").text();
@@ -67,6 +68,11 @@ function goBack(e) {
 function addToStory(e) {
 	console.log("Add To Story Button clicked!");
 	var newText = $("#textToAdd").val()
+	if (newText == "") {
+		e.preventDefault();
+		$("#storyContainer").append("<h4 class='Error' id='emptyTxt'>Try again. No text entered.</h4>");
+		console.log("empty text tried to get entered.");
+	}
 
 	// var q_index = newText.indexOf("\?");
 	// var p_index = newText.indexOf(".");
@@ -77,11 +83,12 @@ function addToStory(e) {
 	// 	$("#textToAddForm").hide();
 	// 	return;
 	// }
-	$("#textToAdd").val($("#text").text() + " " + newText);
+	//$("#textToAdd").val($("#text").text() + " " + newText);
 	// index++;
 	// newText = newText.substring(0, index);
 	// $("#text").text($("#text").text() + " " + newText);
 	//$("#textToAddForm").hide();
+	
 }
 
 
