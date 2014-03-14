@@ -29,7 +29,6 @@
 
 
 <!-- iterates through the stories passed in from the database and renders their thumbnails. -->
-<!-- Graham said not to use A-tags for linking, but I can't make this work without one. I guess that's that... -->
 		{{#each story}} 
 			{{#unless finished}}
 			<div class="story" id="{{id}}">
@@ -39,7 +38,6 @@
 				<span class= "col-xs-9 col-sm-11 titleprog">
 					<div class="storytitle">{{title}}</div>
 					<div class="storypreview">{{text}}</div>
-					<!--<div align = "justify"><font size = "2" color = "white">Contributors: </font><font size = "4" color = "white">{{sentences}}</font></h></div>-->
 				</span>
 			</div></a>
 			{{/unless}}
@@ -50,7 +48,6 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/mainpage.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
-		<!-- <script src="js/storyshare.js"></script> -->
 
 		<!--This is the Google Analytics code-->
 	<script>

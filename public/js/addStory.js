@@ -8,8 +8,8 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 //	$("#submitBtn").submit(errorCheck);
-	$('#submitBtn').click(errorCheck);
-//	$("#addStoryForm").submit(errorCheck);
+//	$('#submitBtn').click(errorCheck);
+	$("#addStoryForm").submit(errorCheck);
 }
 
 
@@ -23,10 +23,11 @@ $(function() {
 
 function errorCheck(e) {
 	console.log("Attempting to submit. Checking whether or not their is a title.");
-	var newText =$("#title").text();
+
+	var newText = $("#addStoryForm #title").val();
 	console.log("Title: " + newText);
 	if(newText == ""){
-			e.preventDefault();
+		e.preventDefault();
 		console.log("There was no title appended.");
 		$("#addStoryForm").append("<h4 class='Error' id='emptyTitle'>Try again. No title provided.</h4>");
 	}

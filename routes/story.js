@@ -12,7 +12,6 @@ exports.view = function(req, res){
 	function afterStoryQuery(err, stories) {
 		if(err) console.log(err);
 		console.log(stories[0]);
-		// var story = JSON.stringify(stories[0]);
 		var story = stories[0];
 		story["viewVersionB"] = false;
 		story["not-finished"] = story.sentences < 10;
@@ -21,33 +20,9 @@ exports.view = function(req, res){
 		console.log("Story not finished: " + story["not-finished"]);
 		res.render("StoryPage", story);
 	}
-	// storyData._finished = storyData.sentences < 10;
-	// res.render("StoryPage", Story);
+
 };
 
-exports.viewVersionB = function(req, res){
-	var storyID = req.params.id;
-	console.log(storyID);
-	models.Story
-		.find({"_id": storyID})
-		.exec(afterStoryQuery)
-	
-
-	function afterStoryQuery(err, stories) {
-		if(err) console.log(err);
-		console.log(stories[0]);
-		// var story = JSON.stringify(stories[0]);
-		var story = stories[0];
-		story["viewVersionB"] = true;
-		story["not-finished"] = story.sentences < 10;
-		story["finished"] = story.sentences >= 10;
-		console.log("Story finished: " + story.finished);
-		console.log("Story not finished: " + story["not-finished"]);
-		res.render("StoryPage", story);
-	}
-	// storyData._finished = storyData.sentences < 10;
-	// res.render("StoryPage", Story);
-};
 
 exports.add = function (req, res){
 	console.log("We're trying to add...");
@@ -64,7 +39,6 @@ exports.add = function (req, res){
 		console.log("Save Success?");
 		res.redirect("/main");
 	}
-	// res.redirect('/placeholders/success.html')
 };
 
 exports.update = function(req, res){
