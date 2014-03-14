@@ -49,7 +49,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', landing.view);
 // Route for Google Analytics
-app.get('/versionB', about.viewVersionB);
+//app.get('/versionB', about.viewVersionB);
 
 app.get('/main', main.view);
 //app.get('/mainB', main.viewVersionB);

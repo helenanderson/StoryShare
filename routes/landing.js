@@ -5,9 +5,3 @@ exports.view = function(req, res){
 		
 
 };
-
-exports.viewVersionB = function(req, res){
-
-		var version = {'showVersionB': true};
-		res.render('landingpage', version);
-};
