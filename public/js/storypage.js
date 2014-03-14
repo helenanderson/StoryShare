@@ -70,20 +70,4 @@ function addToStory(e) {
 		$("#storyContainer").append("<h4 class='Error' id='emptyTxt'>Try again. No text entered.</h4>");
 		console.log("empty text tried to get entered.");
 	}
-
-	// var q_index = newText.indexOf("\?");
-	// var p_index = newText.indexOf(".");
-	// var e_index = newText.indexOf("!");
-	// var index = minimum(e_index, minimum(p_index, q_index));
-	// if (index == -1) {
-	// 	$("#text").text($("#text").text() + " " + newText + ".");
-	// 	$("#textToAddForm").hide();
-	// 	return;
-	// }
-	//$("#textToAdd").val($("#text").text() + " " + newText);
-	// index++;
-	// newText = newText.substring(0, index);
-	// $("#text").text($("#text").text() + " " + newText);
-	//$("#textToAddForm").hide();
-	
 }

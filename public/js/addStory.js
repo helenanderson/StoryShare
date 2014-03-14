@@ -7,8 +7,6 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-//	$("#submitBtn").submit(errorCheck);
-//	$('#submitBtn').click(errorCheck);
 	$("#addStoryForm").submit(errorCheck);
 }
 
