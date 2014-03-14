@@ -29,7 +29,8 @@ var projects_json = require('./stories.json');
 
 // Step 2: Remove all existing documents
 models.Story
-  .find()
+//find the ones that have an empty title.
+  .find({"title" : ""})
   .remove()
   .exec(onceClear); // callback to continue at
 
@@ -39,23 +40,23 @@ function onceClear(err) {
 
   // loop over the projects, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
-  var to_save_count = projects_json.length;
-  for(var i=0; i<projects_json.length; i++) {
-    var json = projects_json[i];
-    var proj = new models.Story(json);
+  // var to_save_count = projects_json.length;
+  // for(var i=0; i<projects_json.length; i++) {
+  //   var json = projects_json[i];
+  //   var proj = new models.Story(json);
 
-    proj.save(function(err, proj) {
-      if(err) console.log(err);
+  //   proj.save(function(err, proj) {
+  //     if(err) console.log(err);
 
-      to_save_count--;
-      console.log(to_save_count + ' left to save');
-      if(to_save_count <= 0) {
-        console.log('DONE');
-        // The script won't terminate until the 
-        // connection to the database is closed
+  //     to_save_count--;
+  //     console.log(to_save_count + ' left to save');
+  //     if(to_save_count <= 0) {
+  //       console.log('DONE');
+  //       // The script won't terminate until the 
+  //       // connection to the database is closed
         mongoose.connection.close()
-      }
-    });
-  }
+  //     }
+  //   });
+  // }
 }
 
