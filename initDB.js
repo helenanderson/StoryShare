@@ -30,7 +30,7 @@ var projects_json = require('./stories.json');
 // Step 2: Remove all existing documents
 models.Story
 //find the ones that have an empty title.
-  .find({"title" : "Wednesday night"})
+  .find({"title" : "Math Fifty Fun"})
   .remove()
   .exec(onceClear); // callback to continue at
 
