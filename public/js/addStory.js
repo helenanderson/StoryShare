@@ -7,7 +7,9 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-	//$('#submitBtn').click(NewStory);
+	$("#submitBtn").submit(errorCheck);
+	$('#submitBtn').click(errorCheck);
+	$("#addStoryForm").submit(errorCheck);
 }
 
 
@@ -18,3 +20,13 @@ $(function() {
 			counterFormat: '%1 characters remaining.'
 		});
  	});
+function errorCheck(e) {
+	console.log("Attempting to submit. Checking whether or not their is a title.");
+	var newText =$("title").text();
+	var newVal = $("title").value();
+	if(newText == "" ||  newVal == ""){
+		e.preventDefault();
+		console.log("There was no title appended.");
+		$("addStoryForm").append("<h4 class='Error' id='emptyTitle'>Try again. No title provided.</h4>");
+	}
+}
