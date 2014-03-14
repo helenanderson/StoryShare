@@ -15,8 +15,10 @@ exports.view = function(req, res){
 		// var story = JSON.stringify(stories[0]);
 		var story = stories[0];
 		story["viewVersionB"] = false;
-		story["finished"] = story.sentences < 10;
-		console.log(story.finished);
+		story["not-finished"] = story.sentences < 10;
+		story["finished"] = story.sentences >= 10;
+		console.log("Story finished: " + story.finished);
+		console.log("Story not finished: " + story["not-finished"]);
 		res.render("StoryPage", story);
 	}
 	// storyData._finished = storyData.sentences < 10;
@@ -37,8 +39,10 @@ exports.viewVersionB = function(req, res){
 		// var story = JSON.stringify(stories[0]);
 		var story = stories[0];
 		story["viewVersionB"] = true;
-		story["finished"]=story.sentences < 10;
-		console.log(story.finished);
+		story["not-finished"] = story.sentences < 10;
+		story["finished"] = story.sentences >= 10;
+		console.log("Story finished: " + story.finished);
+		console.log("Story not finished: " + story["not-finished"]);
 		res.render("StoryPage", story);
 	}
 	// storyData._finished = storyData.sentences < 10;

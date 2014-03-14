@@ -12,9 +12,6 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 	$('#addBtn').click(addToStoryInit);
-	$('#upVote').click(UpVote);
-	$('#downVote').click(DownVote);
-	$('#emptyTxt').hide();
 
 //This is just a little debugging code to log relevant info about the story.
 // 	var story = $("#story1").text();
@@ -89,30 +86,4 @@ function addToStory(e) {
 	// $("#text").text($("#text").text() + " " + newText);
 	//$("#textToAddForm").hide();
 	
-}
-
-
-
-function UpVote(e) {
-	// console.log("upvote");
-	var votes = $("#votes").text();
-	votes++;
-	$("#votes").text(votes);
-	$("#downVote").prop('disabled', false);
-	$("#upVote").prop('disabled', true);
-}
-
-function DownVote(e) {
-	// console.log("downvote");
-	var votes = $("#votes").text();
-	votes--;
-	$("#votes").text(votes);
-	$("#downVote").prop('disabled', true);
-	$("#upVote").prop('disabled', false);
-}
-
-function minimum(num1, num2){
-	if (num2 == -1) return num1;
-	return (num1 != -1 && num1 < num2) ? num1:num2;
-
 }

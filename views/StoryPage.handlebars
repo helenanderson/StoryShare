@@ -29,18 +29,19 @@
 			</div>
 <!-- 
 			<a href="placeholders/mainpage.html"><button id="backbtn" class="btn btn-primary btn-lg" style = "margin-top: 10px; margin-left: 10px;">Back</button></a> -->
-			
-			{{#if finished}}
 			<div class="span7">
-				<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px">Add to Story</button>
-				<a href= "/main"><button id = backBtn class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>
+				{{#if finished}}
+					<a href= "/archive"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>
+				{{/if}}
+				{{#if not-finished}}
+					<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px">Add to Story</button>
+					<a href= "/main"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>
+				{{/if}}
 			</div>
-			{{/if}}
-<!--
+<!--		
 			 <h4> <button id="upVote" type="button" class="btn btn-default btn-sm">Up Vote</button> <span id="votes">{{votes}}&nbsp</span><button id="downVote" type="button" class="btn btn-default btn-sm">Down Vote</button></h4>
 		</div>
 -->
-	<!-- Add the "back button" -->
 		</div>
 
 		<!--<script src="https://code.jquery.com/jquery.js"></script>-->
