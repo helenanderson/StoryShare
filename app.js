@@ -19,8 +19,8 @@ var landing = require('./routes/landing');
 
 
 //setting up the database
-var local_database_name = 'storyshare';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
+var local_database_name = 'sparkdata';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name;
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
 
