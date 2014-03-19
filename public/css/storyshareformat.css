@@ -1,11 +1,82 @@
-.banner{
-     /*position:relative;
-     width: 480px; */
-     height: 100px; 
-     background-image: url("../images/linedpaper.jpg");
-     background-size: cover;
-     margin-bottom: 0px;
+h1 {  
+     font-family: 'Cedarville Cursive', cursive;
+     color: #E62E00;
+     text-align: center;
+     font-size: 60px;
+     margin-top: 60px;
+     line-height: 1.25;   
 }
+
+
+h2 {
+     color: white;
+     font-family: 'Raleway', sans-serif;
+     font-weight: bold;
+     font-size: 24px;
+     font-weight: bold;
+}
+
+
+h3 {
+    color: #E62E00;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 24px;
+    margin: 7px;
+    font-weight: 500;
+}
+
+
+h4 {
+
+}
+
+
+p {
+     color: white;
+     font-family: 'Raleway', sans-serif;
+     font-size: 16px;
+     line-height: 150%;
+}
+
+
+a {
+    color: #66CCFF;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.start-button {
+    margin: 5px;
+    border-color: #E62E00;
+    border-width: 2px;
+    width: 230px;
+}
+
+
+.start-button:hover {
+    border-color: #66CCFF;
+}
+
+
+.start-button:hover h3 {
+    color: #66CCFF;
+}
+
+
+.helpLink p {
+    text-align: center;
+    color: #66CCFF;
+}
+
+
+
+
+
+
+
 
 
 .navbartitle {
@@ -15,17 +86,9 @@
     margin-bottom: 0px;
     margin-top: 3px;
     text-decoration: none;
-    border-bottom-style: none;
-   
+    border-bottom-style: none; 
 }
 
-h1 {  
-     font-family: 'Mrs Sheppards', cursive;
-     text-align: center;
-     font-size: 60px;
-     margin-top: 0px;
-     line-height: 1.25;
-}
 
 .menuPageLine {
      font-size: 40px;
@@ -105,26 +168,7 @@ h1 {
 }
 
 
-.jumbotron {
-     position: relative;
-     background: none;
-     text-align: center;
-     color: #323232;
-     padding: 55px;
-     margin-bottom: 0px;
-}
 
-.jumbotron:after {
-     content:"";
-     background-image: url(images/lined_paper_by_LL_stock.jpg);
-     opacity: 1;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: absolute;
-     z-index: -1;   
-} 
 
 .btn-group {
      padding-top: 40px;
@@ -138,21 +182,8 @@ button {
      border-color: #323232;
 }
 
-#writeread {
-     border: 40px;
-     border-color: black;
-     font-family: 'Raleway', sans-serif;
-     font-size: 50px;
-}
 
-h1 {
-     font-family: 'Mrs Sheppards', cursive;
-     font-size: 65px;
-}
 
-body {
-     background-color: #323232;
-}
 
 
 
@@ -211,19 +242,14 @@ body {
 
 
 .landing-page {
-    /*background-image: url("../images/linedpaper.jpg");*/
+    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
     /*background-color: color: #323232;;*/
     background-size: cover;
     margin-top: 0px;
 }
 
-.landing-page p {
-    color: white;
-}
 
-.landing-page h1 {
-    color: #323232;
-}
+
 
 .landing-page h5 {
     color: white;
@@ -238,54 +264,14 @@ body {
 } 
 
 
-/*h1 {
-    font-color: #323232;
-}*/
-h2 {
-     color: white;
-     font-weight: bold;
-}
 
-h3 {
-     color: white;
-}
-
-h4 {
-     color: white;
-}
-
-
-h5 {
-    color: #323232;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-p {
-     color: white;
-}
 
 .smallscreen {
     min-width: 0px;
 }
 
-.start-button {
-    margin: 5px;
-}
 
-.helpLink h6 {
-    text-align: right;
-    margin-right: 20px;
-    color: #357ebd;
-    font-size: 15pt;
-}
 
-.helplink {
-    position: fixed;
-    bottom: 5px;
-    right: 10px;
-}
 
 
 @media all and (max-width: 480px)  {
