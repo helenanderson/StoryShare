@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Archive</title>
+		<title>Finished Stories</title>	
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="../js/jquery-1.11.0.js"></script>
@@ -8,9 +8,8 @@
 		<script src="../js/bootstrap.min.js"></script>
 		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="../css/storyshareformat.css" rel="stylesheet"> 
-		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
-		<script src="HTMLImports/html-imports.js"></script>
-	</head>
+		<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
@@ -18,14 +17,7 @@
 
 	{{> banner}}
 
-	<div class = container>
-				<p><font size="5">Story Archive</font></p>
-				<font size="2" color="white">Read finished stories </font></p><br>
-	</div>
-<div class="container">
-
-
-
+	
 
 <!-- iterates through the stories passed in from the database and renders their thumbnails. -->
 <!-- Graham said not to use A-tags for linking, but I can't make this work without one. I guess that's that... -->
@@ -43,22 +35,11 @@
 			{{/if}}
 		{{/each}}
 	
-		</div>
 		<script src="js/jquery-1.11.0.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/mainpage.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 
-		<!--This is the Google Analytics code-->
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48656519-1', { 'storyshare.herokuapp.com' });
-  ga('send', 'pageview');
-
-</script>
+		
 	</body>
 </html>

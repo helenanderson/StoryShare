@@ -12,7 +12,7 @@ h2 {
      color: white;
      font-family: 'Raleway', sans-serif;
      font-weight: bold;
-     font-size: 24px;
+     font-size: 20px;
      font-weight: bold;
 }
 
@@ -29,7 +29,7 @@ h3 {
 p {
      color: white;
      font-family: 'Raleway', sans-serif;
-     font-size: 16px;
+     font-size: 15px;
      line-height: 150%;
 }
 
@@ -48,13 +48,14 @@ body {
     margin-top: 64px;
     margin-bottom: 50px;
     background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+    background-size: cover;
 } 
 
 .start-button {
     margin: 5px;
     border-color: #E62E00;
     border-width: 2px;
-    width: 230px;
+    /*width: 230px; */
 }
 
 
@@ -94,6 +95,7 @@ body {
 
 .sparknav {
     background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+    background-size: cover;
     height: 60px;
     width: 100%;
     border-bottom: 2px solid #E62E00;
@@ -101,11 +103,12 @@ body {
 }
 
 
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav .open > a:active {
     background-color: transparent;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
+
+.nav > li > a:hover, .nav > li > a:focus  {
     background-color: transparent;
 }
 
@@ -132,7 +135,6 @@ body {
 {
    text-decoration: none;
    color: #66CCFF;
-   background: transparent;
 }
 
 .nav-link:active
@@ -186,19 +188,6 @@ body {
 }
 
 
-
-
-
-.menuPageLine {
-     font-size: 40px;
-     color: white;
-     text-align: left;
-}
-
-.count {
-    color: #C0C0C0;
-}
-
 .form-label{
     color:white;
     font-weight: lighter;
@@ -213,6 +202,7 @@ body {
     white-space:nowrap;
     text-overflow:ellipsis;
     font-family: 'Raleway', sans-serif;  
+    color: white;
 }
 
 .storypreview {
@@ -230,18 +220,18 @@ body {
 }
 
 
-
-
-
-.menu {
-     width: 480px;
+.storypagetitle {
+    white-space:nowrap;
+    margin-left: 10px;
+    font-size: 18px;
+    max-width: 100%;
+    display: inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    font-family: 'Raleway', sans-serif;  
+    color: white;
 }
 
-
-
-.percentcomplete {
-     width: 350px;
-}
 
 .story-add-field {
     rows: "3";
@@ -251,8 +241,6 @@ body {
 .count {
     display: block;
 }
-
-
 
 
 .btn-group {
@@ -295,9 +283,7 @@ button {
      height: 40px;
 }
 
-.searchbar {
-     width: 100%;
-}
+
 
 
 

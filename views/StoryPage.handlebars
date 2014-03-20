@@ -1,7 +1,7 @@
 <html>
 
 	<head>
-		<title>Story Page</title>	
+		<title>{{title}}</title>	
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="../js/jquery-1.11.0.js"></script>
@@ -9,7 +9,8 @@
 		<script src="../js/bootstrap.min.js"></script>
 		<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="../css/storyshareformat.css" rel="stylesheet"> 
-		<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
@@ -17,22 +18,44 @@
 
 		  {{> banner}}
 
+		  <br>
 
 		<div class="container" id="storyContainer">
 
-
-
 			<div id="{{id}}" class = "story">	
-				<p><font size = 5> {{title}} </font></p>
+			
+
+			
+				<img class="thumb" src= "../images/{{sentences}}-10.png">
+			
+				<span>
+					<div class="storypagetitle"><p><b>{{title}}</b></p></div>
+				</span>
+
+			</div>
+
+			<br>
+
+			
+			<div>
 				<p id ="text">{{text}}</p>
 			</div>
-			<div class="span7">
+
+
+			<div>
 				{{#if finished}}
-					<a href= "/archive"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>
+					<div class="text-center">
+					<a href= "/archive"><button id = "backBtn" class="btn start-button" style = "margin-top: 10px"><h3>Back to Stories</h3></button></a>
+				</div>
 				{{/if}}
 				{{#if not-finished}}
-					<button id="addBtn" class="btn btn-primary btn-lg" style = "margin-top: 10px">Add to Story</button>
-					<a href= "/main"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>
+					<br>
+					<div class="text-center">
+					<button id="addBtn" class="btn start-button"><h3>Add to Story<h3></button>
+					</div>
+
+					<!--<a href= "/main"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>-->
+
 				{{/if}}
 			</div>
 		</div>
@@ -40,18 +63,6 @@
 		<script src="../js/storypage.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/bootstrap.js"></script>
-
-		<!--This is the Google Analytics code-->
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48656519-1', { 'storyshare.herokuapp.com' });
-  ga('send', 'pageview');
-
-</script>
 
 	</body>
 </html>
