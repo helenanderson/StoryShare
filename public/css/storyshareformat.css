@@ -26,11 +26,6 @@ h3 {
 }
 
 
-h4 {
-
-}
-
-
 p {
      color: white;
      font-family: 'Raleway', sans-serif;
@@ -47,6 +42,13 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+
+body {
+    margin-top: 64px;
+    margin-bottom: 50px;
+    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+} 
 
 .start-button {
     margin: 5px;
@@ -72,22 +74,119 @@ a:hover {
 }
 
 
-
-
-
-
-
+.landing-page {
+    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+    background-size: cover;
+    margin-top: 0px;
+}
 
 
 .navbartitle {
-    font-family: 'Mrs Sheppards', cursive;
+    font-family: 'Cedarville Cursive', cursive;
+    color: #E62E00;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
+    font-weight: 700px;
     margin-bottom: 0px;
-    margin-top: 3px;
-    text-decoration: none;
-    border-bottom-style: none; 
+    margin-top: 12px; 
 }
+
+
+.sparknav {
+    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px solid #E62E00;
+    border-radius: 0px;
+}
+
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}
+
+
+.menunav {
+    margin-top: 2px;
+    color: #E62E00;
+}
+
+
+.nav-link:link
+{
+   text-decoration: none;
+   color: #E62E00;
+}
+
+.nav-link:visited
+{
+   text-decoration: none;
+   color: #E62E00;
+}
+
+.nav-link:hover
+{
+   text-decoration: none;
+   color: #66CCFF;
+   background: transparent;
+}
+
+.nav-link:active
+{
+   text-decoration: none;
+   color: #E62E00;
+}
+
+
+.thumbicon {
+    height: 70px;
+
+}
+
+
+
+.thumb {
+     width: 50px;
+     height: 50px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+
+.titleprog {
+     display: inline-block;
+     overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    height: 70px;
+    text-align: left;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.story {
+    max-width: 100%;
+    height: 70px;
+
+    /*
+    border-left: 4px;
+    border-right: 4px;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #E62E00;
+    */
+}
+
+
+
 
 
 .menuPageLine {
@@ -113,7 +212,7 @@ a:hover {
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
-  
+    font-family: 'Raleway', sans-serif;  
 }
 
 .storypreview {
@@ -122,7 +221,7 @@ a:hover {
     max-width: 100%;
     overflow:hidden;
     white-space:nowrap;
-
+    font-family: 'Raleway', sans-serif;
     text-overflow:ellipsis;
 }
 
@@ -130,29 +229,15 @@ a:hover {
     height: 70px;
 }
 
-.story {
-    max-width: 100%;
-}
 
-.titleprog {
-     display: inline-block;
-     overflow: hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    max-width: 100%;
-    height: 70px;
-    text-align: left;
-}
+
+
 
 .menu {
      width: 480px;
 }
 
-.thumb {
-     width: 50px;
-     height: 50px;
-     margin-bottom: 20px;
-}
+
 
 .percentcomplete {
      width: 350px;
@@ -187,30 +272,9 @@ button {
 
 
 
-.nav-link:link
-{
-   color: #323232;
-   text-decoration: none;
-}
-.nav-link:visited
-{
-   color: #323232;
-   text-decoration: none;
-}
-.nav-link:hover
-{
-   color: #323232;
-   text-decoration: none;
-}
-.nav-link:active
-{
-   color: #323232;
-   text-decoration: none;
-}
 
-.navbar li {
-    /* display: inline-block; */
-}
+
+
 
 .inline {
      display: inline-block;
@@ -235,33 +299,15 @@ button {
      width: 100%;
 }
 
-.navbar ul {
-    /* display: inline-block; */
-}
-
-
-
-.landing-page {
-    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
-    /*background-color: color: #323232;;*/
-    background-size: cover;
-    margin-top: 0px;
-}
 
 
 
 
-.landing-page h5 {
-    color: white;
-}
 
 
 
-body {
-     background-color: #323232;
-     margin-top: 60px;
-     margin-bottom: 50px;
-} 
+
+
 
 
 
