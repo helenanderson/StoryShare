@@ -86,10 +86,15 @@ body {
     font-family: 'Cedarville Cursive', cursive;
     color: #E62E00;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700px;
     margin-bottom: 0px;
-    margin-top: 12px; 
+    margin-top: 10px; 
+}
+
+
+.menuglyph {
+    font-size: 20px;
 }
 
 
