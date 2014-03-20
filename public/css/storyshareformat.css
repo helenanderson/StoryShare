@@ -87,7 +87,7 @@ body {
     color: #E62E00;
     text-align: center;
     font-size: 32px;
-    font-weight: 700px;
+    font-weight: 800px;
     margin-bottom: 0px;
     margin-top: 10px; 
 }
@@ -99,8 +99,9 @@ body {
 
 
 .sparknav {
-    background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
-    background-size: cover;
+    /*background-image: url("../images/Dark-Blue-Starry-Sky.jpg");
+    background-size: cover;*/
+    background-color: #EBC633;
     height: 60px;
     width: 100%;
     border-bottom: 2px solid #E62E00;
@@ -170,6 +171,11 @@ body {
 }
 
 
+.storythumb {
+    width: 70px;
+    height: 70px;
+}
+
 .titleprog {
      display: inline-block;
      overflow: hidden;
@@ -213,7 +219,7 @@ body {
     white-space:nowrap;
     text-overflow:ellipsis;
     font-family: 'Raleway', sans-serif;  
-    color: white;
+    color: #66CCFf;
 }
 
 .storypreview {
@@ -240,7 +246,8 @@ body {
     overflow:hidden;
     white-space:nowrap;
     font-family: 'Raleway', sans-serif;  
-    color: white;
+    color: #E62E00;
+    font-weight: bold;
 }
 
 
@@ -252,7 +259,7 @@ body {
 .count {
     display: block;
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     color: white;
 }
 
