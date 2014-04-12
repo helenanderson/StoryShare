@@ -11,6 +11,6 @@ exports.view = function(req, res){
 			var story = stories[i];
 			story["finished"]=story.sentences > 9;
 		}
-		res.render('mainpage', {'story': stories, 'showVersionB': false});
+		res.render('mainpage', {'story': stories});
 	}
 };

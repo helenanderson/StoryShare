@@ -51,6 +51,50 @@ body {
     background-size: cover;
 } 
 
+
+.vote-button {
+    border-color: #66CCFF;
+    border-width: 2px;
+    border-radius: 0px;
+    white-space: normal;
+   
+    /*width: 230px; */
+}
+
+
+#top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#bottom {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.vote-button:hover {
+    border-color: #66CCFF;
+    background-color: #E62E00;
+    
+}
+
+p.vote-button:hover {
+    color: #66CCFF;
+}
+
+
+.vote-button.active {
+    border-color: #66CCFF;
+    background-color: #E62E00;
+    
+}
+
+p.vote-button.active {
+    color: #66CCFF;
+}
+
+
 .start-button {
     margin: 5px;
     border-color: #E62E00;

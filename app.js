@@ -16,6 +16,8 @@ var about = require('./routes/about');
 var newstory = require('./routes/add');
 var archive = require('./routes/archive');
 var landing = require('./routes/landing');
+var writesuccess = require('./routes/writesuccess');
+var votesuccess = require('./routes/votesuccess');
 
 
 //setting up the database
@@ -62,10 +64,15 @@ app.get('/landing', landing.view);
 
 app.get('/about', about.view);
 
+app.get('/writesuccess', writesuccess.view);
+
+app.get('/votesuccess', votesuccess.view);
+
 app.get('/new', newstory.view); //Where does this get called?
 
 app.post('/story', story.add); //This calls the 'add' function in 'story.js' for adding the story to the database
 app.post('/story/update/:id', story.update);
+app.post('/story/voteupdate/:id', story.voteupdate);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

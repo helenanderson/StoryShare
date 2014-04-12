@@ -5,8 +5,12 @@ var StorySchema = new Mongoose.Schema({
 	"title": String,
 	"sentences": Number,
 	"text": String,
-	"votes": Number
+	"totalVotes": Number,
+	"totalChoices": Number,
+	"multipleChoices": [String],
+	"votesPerChoice": [Number]
 });
+
 
 exports.Story = Mongoose.model('Story', StorySchema);
 

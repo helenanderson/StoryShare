@@ -47,15 +47,47 @@
 					<div class="text-center">
 					<a href= "/archive"><button id = "backBtn" class="btn start-button" style = "margin-top: 10px"><h3>Back to Stories</h3></button></a>
 				</div>
-				{{/if}}
-				{{#if not-finished}}
-					<br>
-					<div class="text-center">
-					<button id="addBtn" class="btn start-button"><h3>Add to Story<h3></button>
-					</div>
+				{{else}}
+					<br/>
+						{{#if in-voting}}
+						<h3 class="text-center">What happens next?</h3>
+						<form id ='votingForm' method ='post' action = '/story/voteupdate/{{_id}}'>
+							<div class="text-center">
 
+							<div id="voteBox" class="btn-group-vertical voting-box" data-toggle="buttons">
+  								<label class="btn vote-button" id="top">
+    								<input type="radio" name="voteoptions" value="0" data-toggle="button"><p>{{multipleChoices.[0]}}</p>
+  								</label>
+  								<label class="btn vote-button">
+   									<input type="radio" name="voteoptions" value="1" data-toggle="button"> <p>{{multipleChoices.[1]}}</p>
+  								</label>
+  								<label class="btn vote-button">
+    								<input type="radio" name="voteoptions" value="2" data-toggle="button"> <p>{{multipleChoices.[2]}}</p>
+  								</label>
+  								<label class="btn vote-button" id="bottom">
+    								<input type="radio" name="voteoptions" value="3" data-toggle="button"> <p>{{multipleChoices.[3]}}</p>
+  								</label>
+							</div>
+						</div>
+							<br><br>
+							<div class="text-center">
+							<button class="btn start-button" role="button" id="voteBtn" type="submit" onclick=><h3>Vote!</h3></button>
+						</div>
+					</form>
+
+
+						{{else}}
+
+						
+					
+						<div class="text-center">
+							<button id="addBtn" class="btn start-button"><h3>What should happen next?<h3></button>
+						</div>
+					
+
+					
+					{{/if}}
 					<!--<a href= "/main"><button id = "backBtn" class="btn btn pull-right btn-primary btn-lg" style = "margin-top: 10px">Go Back</button></a>-->
-
 				{{/if}}
 			</div>
 		</div>
